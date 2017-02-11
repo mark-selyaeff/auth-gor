@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
         setcookie("hash", $hash, time()+60*60*24*30);
 
         # Переадресовываем браузер на страницу проверки нашего скрипта
-        header("Location: check.php"); exit();
+        header("Location: quiz.html"); exit();
     }
     else
     {

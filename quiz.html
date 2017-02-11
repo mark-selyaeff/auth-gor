@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Опрос</title>
+	<style>
+		label {
+			display: block;
+		}
+
+		.form {
+			border: 2px solid black;
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 500px;
+		}
+
+		textarea {
+			display: block;
+			margin: 0 auto;
+		}
+
+		form > * {
+			text-align: center;
+		}
+
+		form > input:last-child {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<form action="submit.php" method="POST">
+			<label>Ваши цели с ИТМО: <textarea name="aims" id="aims" cols="30" rows="10"></textarea></label>
+			<label>Как вы оцениваете перспективу развития ИТМО? <textarea name="future" id="future" cols="30" rows="10"></textarea></label>
+			<label>Ваш статус: <select name="status" id="status" size="1">
+				<option value="worker">Работник</option>
+				<option value="student">Студент</option>
+				<option value="abiturient">Абитуриент</option>
+			</select></label>
+			<label>Довольны ли вы Университом?<input type="checkbox" id="box" name="box"></label>
+			<input type="submit" name="submit" value="Отправить">
+		</form>
+	</div>
+</body>
+</html>

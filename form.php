@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
 
     # проверяем, не сущестует ли пользователя с таким именем
     $query = mysqli_query($link, "SELECT COUNT(user_id) as total FROM users WHERE user_login='".mysqli_real_escape_string($link, $_POST['login'])."'");
-    $row = mysqli_fetch_array($query);
+    $row = mysqli_fetch_array($query, MYSQLI_NUM);
     if($row[0] > 0)
     {
         $err[] = "Пользователь с таким логином уже существует в базе данных";
